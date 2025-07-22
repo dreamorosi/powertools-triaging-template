@@ -103,6 +103,4 @@ npm run lint:fix
 - The project uses ESM modules (note the `"type": "module"` in package.json) and outputs JavaScript files in ESM format. If you need to switch to CommonJS, you only need to:
   - change the `format: OutputFormat.ESM,` line in `lib/triage-stack.ts` to `format: OutputFormat.CJS,`
   - remove the `banner` in the `bundling` options of the `NodejsFunction` construct.
-- AWS Lambda Powertools for logging, metrics, and tracing
-- Biome for linting and formatting
-- Vitest for testing
+- The project comes with the three Powertools for AWS core utilities installed, you can add more as needed by running `npm install @aws-lambda-powertools/<utility>`.
