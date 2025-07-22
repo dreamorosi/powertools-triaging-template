@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directories:
+      - "/"
+    labels: [ ]
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: npm
+    directories:
+      - "/"
+    labels: [ ]
+    schedule:
+      interval: weekly
+    versioning-strategy: increase
+    groups:
+      aws-lambda-powertools:
+        patterns:
+        - "@aws-lambda-powertools/*"
+      aws-sdk-v3:
+        patterns:
+        - "@aws-sdk/*"
+        - "@smithy/*"
+      aws-cdk:
+        patterns:
+        - "@aws-cdk/toolkit-lib"
+        - "aws-cdk-lib"
+        - "aws-cdk"
+      typescript:
+        patterns:
+        - "typedoc"
+        - "typedoc-plugin-*"
+        - "typescript"
+      vitest:
+        patterns:
+        - "vitest"
+        - "@vitest/*"
