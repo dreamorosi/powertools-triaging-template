@@ -1,0 +1,7 @@
+{
+  "vitest.debugExclude": [
+    "<node_internals>/**",
+    "**/node_modules/**",
+    "!**/node_modules/@aws-lambda-powertools/**"
+  ]
+}
